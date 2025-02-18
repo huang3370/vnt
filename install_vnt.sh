@@ -13,7 +13,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/root/vnt-cli -k huang -s 124.70.67.138:29872 --cmd
+ExecStart=/root/vnt-cli -k 12345678 --cmd
 Restart=always
 User=root
 Group=root
