@@ -1,5 +1,3 @@
-# vnt
-
 # 定义目标目录 复制下面全部代码
 TARGET_DIR="/root/vnt"
 if [ -d "$TARGET_DIR" ]; then
