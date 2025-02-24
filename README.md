@@ -4,4 +4,13 @@
 
 
 
-[ -d vnt ] && rm -rf vnt; git clone https://github.com/huang3370/vnt.git; chmod +x vnt/install_vnt.sh; sudo ./vnt/install_vnt.sh
+[ -d vnt ] && { echo "Removing existing directory 'vnt'..."; rm -rf vnt; }
+echo "Cloning repository..."
+git clone https://github.com/huang3370/vnt.git && cd vnt && { 
+    echo "Setting execute permissions for install_vnt.sh..."; 
+    chmod +x install_vnt.sh; 
+    echo "Running install_vnt.sh..."; 
+    sudo ./install_vnt.sh; 
+} || { 
+    echo "Failed to clone the repository or run the installation script."; 
+}
